@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAKE NEWS DETECTOR | Elite System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">⚡ VERIFY.AI</div>
+    <div class="nav-links">
+        <span>PROTOCOL</span>
+        <span>DATASET</span>
+        <span>ANALYSIS</span>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="hero-section">
+        <h2 class="subtitle">⚡ MISINFORMATION ANALYSIS V1.0</h2>
+        <h1 class="main-title">
+            TRUTH OR DECEPTION?<br>WE ANALYZE THE SIGNAL.
+        </h1>
+        <p class="description">
+            Paste a news article below. Our AI determines if it is real or fake.
+        </p>
+    </div>
+
+    <div class="input-card">
+        <textarea id="user-input"
+        placeholder="Paste news article (20+ words) for verification..."></textarea>
+
+        <div class="action-bar">
+            <div id="status-note">Awaiting Input...</div>
+
+            <button onclick="sendMessage()" id="analyze-btn">
+                <span class="btn-text">VERIFY NEWS</span>
+                <div class="loader" id="loader" style="display:none;"></div>
+            </button>
+        </div>
+    </div>
+
+    <div id="chat-box" class="results-area"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
